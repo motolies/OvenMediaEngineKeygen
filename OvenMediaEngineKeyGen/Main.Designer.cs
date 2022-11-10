@@ -32,16 +32,16 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.dtRtmpUrlExpire = new System.Windows.Forms.DateTimePicker();
-            this.chkRtmpUrlExpireUse = new System.Windows.Forms.CheckBox();
-            this.chkRtmpUrlActivateUse = new System.Windows.Forms.CheckBox();
-            this.dtRtmpUrlActivate = new System.Windows.Forms.DateTimePicker();
-            this.label5 = new System.Windows.Forms.Label();
             this.chkRtmpStreamExpireUse = new System.Windows.Forms.CheckBox();
             this.dtRtmpStreamExpire = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
+            this.chkRtmpUrlActivateUse = new System.Windows.Forms.CheckBox();
+            this.dtRtmpUrlActivate = new System.Windows.Forms.DateTimePicker();
+            this.label5 = new System.Windows.Forms.Label();
+            this.chkRtmpUrlExpireUse = new System.Windows.Forms.CheckBox();
+            this.dtRtmpUrlExpire = new System.Windows.Forms.DateTimePicker();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.chkWsStreamExpireUse = new System.Windows.Forms.CheckBox();
             this.dtWsStreamExpire = new System.Windows.Forms.DateTimePicker();
@@ -53,7 +53,7 @@
             this.dtWsUrlExpire = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnGen = new System.Windows.Forms.Button();
             this.txtWsResult = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtRtmpResult = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtWsUrl = new OvenMediaEngineKeyGen.TextBoxEx();
@@ -116,43 +116,34 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "RTMP";
             // 
-            // label2
+            // chkRtmpStreamExpireUse
             // 
-            this.label2.Location = new System.Drawing.Point(6, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(146, 18);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Base Url";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.chkRtmpStreamExpireUse.AutoSize = true;
+            this.chkRtmpStreamExpireUse.Location = new System.Drawing.Point(158, 103);
+            this.chkRtmpStreamExpireUse.Name = "chkRtmpStreamExpireUse";
+            this.chkRtmpStreamExpireUse.Size = new System.Drawing.Size(46, 16);
+            this.chkRtmpStreamExpireUse.TabIndex = 9;
+            this.chkRtmpStreamExpireUse.Text = "Use";
+            this.chkRtmpStreamExpireUse.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // dtRtmpStreamExpire
             // 
-            this.label4.Location = new System.Drawing.Point(6, 48);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(146, 18);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "url_expire(KST)";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.dtRtmpStreamExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtRtmpStreamExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRtmpStreamExpire.Location = new System.Drawing.Point(210, 101);
+            this.dtRtmpStreamExpire.Name = "dtRtmpStreamExpire";
+            this.dtRtmpStreamExpire.Size = new System.Drawing.Size(357, 21);
+            this.dtRtmpStreamExpire.TabIndex = 11;
+            this.dtRtmpStreamExpire.Value = new System.DateTime(2022, 11, 11, 0, 0, 0, 0);
             // 
-            // dtRtmpUrlExpire
+            // label6
             // 
-            this.dtRtmpUrlExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.dtRtmpUrlExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtRtmpUrlExpire.Location = new System.Drawing.Point(210, 47);
-            this.dtRtmpUrlExpire.Name = "dtRtmpUrlExpire";
-            this.dtRtmpUrlExpire.Size = new System.Drawing.Size(357, 21);
-            this.dtRtmpUrlExpire.TabIndex = 5;
-            this.dtRtmpUrlExpire.Value = new System.DateTime(2022, 11, 11, 0, 0, 0, 0);
-            // 
-            // chkRtmpUrlExpireUse
-            // 
-            this.chkRtmpUrlExpireUse.AutoSize = true;
-            this.chkRtmpUrlExpireUse.Location = new System.Drawing.Point(158, 49);
-            this.chkRtmpUrlExpireUse.Name = "chkRtmpUrlExpireUse";
-            this.chkRtmpUrlExpireUse.Size = new System.Drawing.Size(46, 16);
-            this.chkRtmpUrlExpireUse.TabIndex = 2;
-            this.chkRtmpUrlExpireUse.Text = "Use";
-            this.chkRtmpUrlExpireUse.UseVisualStyleBackColor = true;
+            this.label6.Location = new System.Drawing.Point(6, 102);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 18);
+            this.label6.TabIndex = 10;
+            this.label6.Text = "stream_expire(KST)";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // chkRtmpUrlActivateUse
             // 
@@ -183,34 +174,46 @@
             this.label5.Text = "url_activate(KST)";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // chkRtmpStreamExpireUse
+            // chkRtmpUrlExpireUse
             // 
-            this.chkRtmpStreamExpireUse.AutoSize = true;
-            this.chkRtmpStreamExpireUse.Location = new System.Drawing.Point(158, 103);
-            this.chkRtmpStreamExpireUse.Name = "chkRtmpStreamExpireUse";
-            this.chkRtmpStreamExpireUse.Size = new System.Drawing.Size(46, 16);
-            this.chkRtmpStreamExpireUse.TabIndex = 9;
-            this.chkRtmpStreamExpireUse.Text = "Use";
-            this.chkRtmpStreamExpireUse.UseVisualStyleBackColor = true;
+            this.chkRtmpUrlExpireUse.AutoSize = true;
+            this.chkRtmpUrlExpireUse.Checked = true;
+            this.chkRtmpUrlExpireUse.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkRtmpUrlExpireUse.Enabled = false;
+            this.chkRtmpUrlExpireUse.Location = new System.Drawing.Point(158, 49);
+            this.chkRtmpUrlExpireUse.Name = "chkRtmpUrlExpireUse";
+            this.chkRtmpUrlExpireUse.Size = new System.Drawing.Size(46, 16);
+            this.chkRtmpUrlExpireUse.TabIndex = 2;
+            this.chkRtmpUrlExpireUse.Text = "Use";
+            this.chkRtmpUrlExpireUse.UseVisualStyleBackColor = true;
             // 
-            // dtRtmpStreamExpire
+            // dtRtmpUrlExpire
             // 
-            this.dtRtmpStreamExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
-            this.dtRtmpStreamExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtRtmpStreamExpire.Location = new System.Drawing.Point(210, 101);
-            this.dtRtmpStreamExpire.Name = "dtRtmpStreamExpire";
-            this.dtRtmpStreamExpire.Size = new System.Drawing.Size(357, 21);
-            this.dtRtmpStreamExpire.TabIndex = 11;
-            this.dtRtmpStreamExpire.Value = new System.DateTime(2022, 11, 11, 0, 0, 0, 0);
+            this.dtRtmpUrlExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtRtmpUrlExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtRtmpUrlExpire.Location = new System.Drawing.Point(210, 47);
+            this.dtRtmpUrlExpire.Name = "dtRtmpUrlExpire";
+            this.dtRtmpUrlExpire.Size = new System.Drawing.Size(357, 21);
+            this.dtRtmpUrlExpire.TabIndex = 5;
+            this.dtRtmpUrlExpire.Value = new System.DateTime(2022, 11, 11, 0, 0, 0, 0);
             // 
-            // label6
+            // label4
             // 
-            this.label6.Location = new System.Drawing.Point(6, 102);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 18);
-            this.label6.TabIndex = 10;
-            this.label6.Text = "stream_expire(KST)";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label4.Location = new System.Drawing.Point(6, 48);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(146, 18);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "url_expire(KST)";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // label2
+            // 
+            this.label2.Location = new System.Drawing.Point(6, 21);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(146, 18);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Base Url";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // groupBox3
             // 
@@ -235,31 +238,37 @@
             // chkWsStreamExpireUse
             // 
             this.chkWsStreamExpireUse.AutoSize = true;
+            this.chkWsStreamExpireUse.Enabled = false;
             this.chkWsStreamExpireUse.Location = new System.Drawing.Point(158, 103);
             this.chkWsStreamExpireUse.Name = "chkWsStreamExpireUse";
             this.chkWsStreamExpireUse.Size = new System.Drawing.Size(46, 16);
             this.chkWsStreamExpireUse.TabIndex = 9;
             this.chkWsStreamExpireUse.Text = "Use";
             this.chkWsStreamExpireUse.UseVisualStyleBackColor = true;
+            this.chkWsStreamExpireUse.Visible = false;
             // 
             // dtWsStreamExpire
             // 
             this.dtWsStreamExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
+            this.dtWsStreamExpire.Enabled = false;
             this.dtWsStreamExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtWsStreamExpire.Location = new System.Drawing.Point(210, 101);
             this.dtWsStreamExpire.Name = "dtWsStreamExpire";
             this.dtWsStreamExpire.Size = new System.Drawing.Size(357, 21);
             this.dtWsStreamExpire.TabIndex = 11;
             this.dtWsStreamExpire.Value = new System.DateTime(2022, 11, 11, 0, 0, 0, 0);
+            this.dtWsStreamExpire.Visible = false;
             // 
             // label7
             // 
+            this.label7.Enabled = false;
             this.label7.Location = new System.Drawing.Point(6, 102);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(146, 18);
             this.label7.TabIndex = 10;
             this.label7.Text = "stream_expire(KST)";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label7.Visible = false;
             // 
             // chkWsUrlActivateUse
             // 
@@ -293,6 +302,9 @@
             // chkWsUrlExpireUse
             // 
             this.chkWsUrlExpireUse.AutoSize = true;
+            this.chkWsUrlExpireUse.Checked = true;
+            this.chkWsUrlExpireUse.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.chkWsUrlExpireUse.Enabled = false;
             this.chkWsUrlExpireUse.Location = new System.Drawing.Point(158, 49);
             this.chkWsUrlExpireUse.Name = "chkWsUrlExpireUse";
             this.chkWsUrlExpireUse.Size = new System.Drawing.Size(46, 16);
@@ -328,14 +340,15 @@
             this.label10.Text = "Base Url";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // button1
+            // btnGen
             // 
-            this.button1.Location = new System.Drawing.Point(12, 429);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(593, 33);
-            this.button1.TabIndex = 13;
-            this.button1.Text = "Generate";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnGen.Location = new System.Drawing.Point(12, 429);
+            this.btnGen.Name = "btnGen";
+            this.btnGen.Size = new System.Drawing.Size(593, 33);
+            this.btnGen.TabIndex = 13;
+            this.btnGen.Text = "Generate";
+            this.btnGen.UseVisualStyleBackColor = true;
+            this.btnGen.Click += new System.EventHandler(this.btnGen_Click);
             // 
             // txtWsResult
             // 
@@ -363,7 +376,7 @@
             this.txtWsUrl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtWsUrl.Size = new System.Drawing.Size(409, 21);
             this.txtWsUrl.TabIndex = 3;
-            this.txtWsUrl.Text = "wss://video.4xtl.de:3334/app/";
+            this.txtWsUrl.Text = "ws://localhost:3333/app/";
             // 
             // txtRtmpUrl
             // 
@@ -373,7 +386,7 @@
             this.txtRtmpUrl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRtmpUrl.Size = new System.Drawing.Size(409, 21);
             this.txtRtmpUrl.TabIndex = 3;
-            this.txtRtmpUrl.Text = "rtmp://rtmp.4xtl.de:1935/app/";
+            this.txtRtmpUrl.Text = "rtmp://localhost:1935/app/";
             // 
             // txtStream
             // 
@@ -393,7 +406,7 @@
             this.txtSecretKey.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSecretKey.Size = new System.Drawing.Size(409, 21);
             this.txtSecretKey.TabIndex = 1;
-            this.txtSecretKey.Text = "4xtl.video#@#";
+            this.txtSecretKey.Text = "motolies.video#@#";
             // 
             // Main
             // 
@@ -402,7 +415,7 @@
             this.ClientSize = new System.Drawing.Size(618, 643);
             this.Controls.Add(this.txtWsResult);
             this.Controls.Add(this.txtRtmpResult);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnGen);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -412,6 +425,7 @@
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "OvenMediaEngine Signed Policy Generator";
+            this.Load += new System.EventHandler(this.Main_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -454,7 +468,7 @@
         private System.Windows.Forms.Label label9;
         private TextBoxEx txtWsUrl;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnGen;
         private TextBoxEx txtRtmpResult;
         private TextBoxEx txtWsResult;
     }
