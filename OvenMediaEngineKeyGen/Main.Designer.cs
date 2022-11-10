@@ -376,7 +376,7 @@
             this.txtWsUrl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtWsUrl.Size = new System.Drawing.Size(409, 21);
             this.txtWsUrl.TabIndex = 3;
-            this.txtWsUrl.Text = "ws://localhost:3333/app/";
+            this.txtWsUrl.Text = "wss://video.4xtl.de:3334/app/";
             // 
             // txtRtmpUrl
             // 
@@ -386,7 +386,7 @@
             this.txtRtmpUrl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtRtmpUrl.Size = new System.Drawing.Size(409, 21);
             this.txtRtmpUrl.TabIndex = 3;
-            this.txtRtmpUrl.Text = "rtmp://localhost:1935/app/";
+            this.txtRtmpUrl.Text = "rtmp://rtmp.4xtl.de:1935/app/";
             // 
             // txtStream
             // 
@@ -406,7 +406,7 @@
             this.txtSecretKey.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
             this.txtSecretKey.Size = new System.Drawing.Size(409, 21);
             this.txtSecretKey.TabIndex = 1;
-            this.txtSecretKey.Text = "motolies.video#@#";
+            this.txtSecretKey.Text = "4xtl.video#@#";
             // 
             // Main
             // 
