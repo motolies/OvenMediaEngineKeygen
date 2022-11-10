@@ -41,6 +41,20 @@ namespace OvenMediaEngineKeyGen
             return string.Format("{0}&signature={1}", stream_url, sig);
         }
 
+        public string generateWebRTC(Dictionary<string, object> param)
+        {
+            string policy_json = new JavaScriptSerializer().Serialize(param);
+
+            var policy_base64 = System.Convert.ToBase64String(Encoding.UTF8.GetBytes(policy_json)).TrimEnd(padding).Replace('+', '-').Replace('/', '_');
+
+            System.Console.WriteLine(policy_json);
+
+            var stream_url = string.Format("{0}{1}?policy={2}&direction=send&transport=tcp", base_url, stream_key, policy_base64);
+            var sig = make_digest(stream_url);
+
+            return string.Format("{0}&signature={1}", stream_url, sig);
+        }
+
         private string DecodeBase64(string value)
         {
             if (string.IsNullOrEmpty(value))

@@ -54,12 +54,15 @@
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.btnGen = new System.Windows.Forms.Button();
+            this.label11 = new System.Windows.Forms.Label();
             this.txtWsResult = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtRtmpResult = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtWsUrl = new OvenMediaEngineKeyGen.TextBoxEx();
+            this.txtWsInputUrl = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtRtmpUrl = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtStream = new OvenMediaEngineKeyGen.TextBoxEx();
             this.txtSecretKey = new OvenMediaEngineKeyGen.TextBoxEx();
+            this.txtWebRTCResult = new OvenMediaEngineKeyGen.TextBoxEx();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -98,6 +101,8 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.txtWsInputUrl);
+            this.groupBox2.Controls.Add(this.label11);
             this.groupBox2.Controls.Add(this.chkRtmpStreamExpireUse);
             this.groupBox2.Controls.Add(this.dtRtmpStreamExpire);
             this.groupBox2.Controls.Add(this.label6);
@@ -111,7 +116,7 @@
             this.groupBox2.Controls.Add(this.label2);
             this.groupBox2.Location = new System.Drawing.Point(12, 121);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(593, 148);
+            this.groupBox2.Size = new System.Drawing.Size(593, 166);
             this.groupBox2.TabIndex = 1;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "RTMP";
@@ -119,7 +124,7 @@
             // chkRtmpStreamExpireUse
             // 
             this.chkRtmpStreamExpireUse.AutoSize = true;
-            this.chkRtmpStreamExpireUse.Location = new System.Drawing.Point(158, 103);
+            this.chkRtmpStreamExpireUse.Location = new System.Drawing.Point(158, 130);
             this.chkRtmpStreamExpireUse.Name = "chkRtmpStreamExpireUse";
             this.chkRtmpStreamExpireUse.Size = new System.Drawing.Size(46, 16);
             this.chkRtmpStreamExpireUse.TabIndex = 9;
@@ -130,7 +135,7 @@
             // 
             this.dtRtmpStreamExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.dtRtmpStreamExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtRtmpStreamExpire.Location = new System.Drawing.Point(210, 101);
+            this.dtRtmpStreamExpire.Location = new System.Drawing.Point(210, 128);
             this.dtRtmpStreamExpire.Name = "dtRtmpStreamExpire";
             this.dtRtmpStreamExpire.Size = new System.Drawing.Size(357, 21);
             this.dtRtmpStreamExpire.TabIndex = 11;
@@ -138,7 +143,7 @@
             // 
             // label6
             // 
-            this.label6.Location = new System.Drawing.Point(6, 102);
+            this.label6.Location = new System.Drawing.Point(6, 129);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(146, 18);
             this.label6.TabIndex = 10;
@@ -148,7 +153,7 @@
             // chkRtmpUrlActivateUse
             // 
             this.chkRtmpUrlActivateUse.AutoSize = true;
-            this.chkRtmpUrlActivateUse.Location = new System.Drawing.Point(158, 76);
+            this.chkRtmpUrlActivateUse.Location = new System.Drawing.Point(158, 103);
             this.chkRtmpUrlActivateUse.Name = "chkRtmpUrlActivateUse";
             this.chkRtmpUrlActivateUse.Size = new System.Drawing.Size(46, 16);
             this.chkRtmpUrlActivateUse.TabIndex = 6;
@@ -159,7 +164,7 @@
             // 
             this.dtRtmpUrlActivate.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.dtRtmpUrlActivate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtRtmpUrlActivate.Location = new System.Drawing.Point(210, 74);
+            this.dtRtmpUrlActivate.Location = new System.Drawing.Point(210, 101);
             this.dtRtmpUrlActivate.Name = "dtRtmpUrlActivate";
             this.dtRtmpUrlActivate.Size = new System.Drawing.Size(357, 21);
             this.dtRtmpUrlActivate.TabIndex = 8;
@@ -167,7 +172,7 @@
             // 
             // label5
             // 
-            this.label5.Location = new System.Drawing.Point(6, 75);
+            this.label5.Location = new System.Drawing.Point(6, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(146, 18);
             this.label5.TabIndex = 7;
@@ -180,7 +185,7 @@
             this.chkRtmpUrlExpireUse.Checked = true;
             this.chkRtmpUrlExpireUse.CheckState = System.Windows.Forms.CheckState.Checked;
             this.chkRtmpUrlExpireUse.Enabled = false;
-            this.chkRtmpUrlExpireUse.Location = new System.Drawing.Point(158, 49);
+            this.chkRtmpUrlExpireUse.Location = new System.Drawing.Point(158, 76);
             this.chkRtmpUrlExpireUse.Name = "chkRtmpUrlExpireUse";
             this.chkRtmpUrlExpireUse.Size = new System.Drawing.Size(46, 16);
             this.chkRtmpUrlExpireUse.TabIndex = 2;
@@ -191,7 +196,7 @@
             // 
             this.dtRtmpUrlExpire.CustomFormat = "yyyy-MM-dd HH:mm:ss";
             this.dtRtmpUrlExpire.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtRtmpUrlExpire.Location = new System.Drawing.Point(210, 47);
+            this.dtRtmpUrlExpire.Location = new System.Drawing.Point(210, 74);
             this.dtRtmpUrlExpire.Name = "dtRtmpUrlExpire";
             this.dtRtmpUrlExpire.Size = new System.Drawing.Size(357, 21);
             this.dtRtmpUrlExpire.TabIndex = 5;
@@ -199,7 +204,7 @@
             // 
             // label4
             // 
-            this.label4.Location = new System.Drawing.Point(6, 48);
+            this.label4.Location = new System.Drawing.Point(6, 75);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(146, 18);
             this.label4.TabIndex = 4;
@@ -228,7 +233,7 @@
             this.groupBox3.Controls.Add(this.label9);
             this.groupBox3.Controls.Add(this.txtWsUrl);
             this.groupBox3.Controls.Add(this.label10);
-            this.groupBox3.Location = new System.Drawing.Point(12, 275);
+            this.groupBox3.Location = new System.Drawing.Point(12, 293);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(593, 148);
             this.groupBox3.TabIndex = 12;
@@ -342,7 +347,7 @@
             // 
             // btnGen
             // 
-            this.btnGen.Location = new System.Drawing.Point(12, 429);
+            this.btnGen.Location = new System.Drawing.Point(12, 447);
             this.btnGen.Name = "btnGen";
             this.btnGen.Size = new System.Drawing.Size(593, 33);
             this.btnGen.TabIndex = 13;
@@ -350,9 +355,18 @@
             this.btnGen.UseVisualStyleBackColor = true;
             this.btnGen.Click += new System.EventHandler(this.btnGen_Click);
             // 
+            // label11
+            // 
+            this.label11.Location = new System.Drawing.Point(6, 48);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(146, 18);
+            this.label11.TabIndex = 12;
+            this.label11.Text = "Base Url(WebRTC)";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtWsResult
             // 
-            this.txtWsResult.Location = new System.Drawing.Point(12, 556);
+            this.txtWsResult.Location = new System.Drawing.Point(12, 653);
             this.txtWsResult.Multiline = true;
             this.txtWsResult.Name = "txtWsResult";
             this.txtWsResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -361,7 +375,7 @@
             // 
             // txtRtmpResult
             // 
-            this.txtRtmpResult.Location = new System.Drawing.Point(12, 477);
+            this.txtRtmpResult.Location = new System.Drawing.Point(12, 495);
             this.txtRtmpResult.Multiline = true;
             this.txtRtmpResult.Name = "txtRtmpResult";
             this.txtRtmpResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
@@ -377,6 +391,16 @@
             this.txtWsUrl.Size = new System.Drawing.Size(409, 21);
             this.txtWsUrl.TabIndex = 3;
             this.txtWsUrl.Text = "wss://video.4xtl.de:3334/app/";
+            // 
+            // txtWsInputUrl
+            // 
+            this.txtWsInputUrl.Location = new System.Drawing.Point(158, 47);
+            this.txtWsInputUrl.Multiline = true;
+            this.txtWsInputUrl.Name = "txtWsInputUrl";
+            this.txtWsInputUrl.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtWsInputUrl.Size = new System.Drawing.Size(409, 21);
+            this.txtWsInputUrl.TabIndex = 13;
+            this.txtWsInputUrl.Text = "wss://rtmp.4xtl.de:3334/app/";
             // 
             // txtRtmpUrl
             // 
@@ -408,11 +432,21 @@
             this.txtSecretKey.TabIndex = 1;
             this.txtSecretKey.Text = "4xtl.video#@#";
             // 
+            // txtWebRTCResult
+            // 
+            this.txtWebRTCResult.Location = new System.Drawing.Point(12, 574);
+            this.txtWebRTCResult.Multiline = true;
+            this.txtWebRTCResult.Name = "txtWebRTCResult";
+            this.txtWebRTCResult.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtWebRTCResult.Size = new System.Drawing.Size(593, 73);
+            this.txtWebRTCResult.TabIndex = 16;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(618, 643);
+            this.ClientSize = new System.Drawing.Size(618, 742);
+            this.Controls.Add(this.txtWebRTCResult);
             this.Controls.Add(this.txtWsResult);
             this.Controls.Add(this.txtRtmpResult);
             this.Controls.Add(this.btnGen);
@@ -471,6 +505,9 @@
         private System.Windows.Forms.Button btnGen;
         private TextBoxEx txtRtmpResult;
         private TextBoxEx txtWsResult;
+        private TextBoxEx txtWsInputUrl;
+        private System.Windows.Forms.Label label11;
+        private TextBoxEx txtWebRTCResult;
     }
 }
 

@@ -61,10 +61,28 @@ namespace OvenMediaEngineKeyGen
             if (chkRtmpStreamExpireUse.Checked)
                 rtmpParam.Add("stream_expire", GetTimeStamp(dtRtmpStreamExpire));
 
-            txtRtmpResult.Text= rtmpGen.generate(rtmpParam);
+            txtRtmpResult.Text = rtmpGen.generate(rtmpParam);
 
 
             #endregion
+
+            #region webrtc
+
+            SignedPolicyUrlGenerator wiGen = new SignedPolicyUrlGenerator(txtWsInputUrl.Text.Trim(), txtStream.Text.Trim(), txtSecretKey.Text.Trim());
+
+            var wiParam = new Dictionary<string, object>();
+            if (chkRtmpUrlExpireUse.Checked)
+                wiParam.Add("url_expire", GetTimeStamp(dtRtmpUrlExpire));
+            if (chkRtmpUrlActivateUse.Checked)
+                wiParam.Add("url_activate", GetTimeStamp(dtRtmpUrlActivate));
+            if (chkRtmpStreamExpireUse.Checked)
+                wiParam.Add("stream_expire", GetTimeStamp(dtRtmpStreamExpire));
+
+            txtWebRTCResult.Text = wiGen.generateWebRTC(wiParam);
+
+
+            #endregion
+
 
             #region ws
 
