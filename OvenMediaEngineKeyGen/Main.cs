@@ -31,6 +31,11 @@ namespace OvenMediaEngineKeyGen
             dtRtmpUrlExpire.Value = dtRtmpStreamExpire.Value = dtRtmpUrlExpire.Value.AddHours(1);
             dtWsUrlExpire.Value = dtWsUrlExpire.Value.AddHours(1);
 
+#if DEBUG
+            txtStream.Text = "motolies-test";
+            DateTime test_dt = new DateTime(2023, 11, 10);
+            dtRtmpUrlExpire.Value = dtRtmpStreamExpire.Value = dtWsUrlExpire.Value = test_dt;
+#endif
         }
 
         public IEnumerable<Control> GetAll(Control control, Type type)

@@ -12,6 +12,7 @@ namespace OvenMediaEngineKeyGen
         public string base_url { get; set; }
         public string stream_key { get; set; }
         public string secret_key { get; set; }
+
         public SignedPolicyUrlGenerator(string baseUrl, string streamKey, string secretKey)
         {
             base_url = baseUrl;
@@ -49,10 +50,10 @@ namespace OvenMediaEngineKeyGen
 
             System.Console.WriteLine(policy_json);
 
-            var stream_url = string.Format("{0}{1}?policy={2}&direction=send&transport=tcp", base_url, stream_key, policy_base64);
+            var stream_url = string.Format("{0}{1}?policy={2}", base_url, stream_key, policy_base64);
             var sig = make_digest(stream_url);
 
-            return string.Format("{0}&signature={1}", stream_url, sig);
+            return string.Format("{0}&signature={1}&direction=send", stream_url, sig);
         }
 
         private string DecodeBase64(string value)
